@@ -1,0 +1,12 @@
+{
+  "name": "dimitriyremerov/reduplication",
+  "description": "A library for lexical reduplication",
+  "minimum-stability": "alpha",
+  "license": "GPL-3",
+  "authors": [
+    {
+      "name": "Dimitriy Remerov",
+      "email": "dimitriy@remerov.ru"
+    }
+  ]
+}
