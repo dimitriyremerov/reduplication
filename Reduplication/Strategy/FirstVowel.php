@@ -13,7 +13,7 @@ use Reduplication\AbstractReduplicator;
 use Reduplication\ReduplicationConfig;
 use Reduplication\ReduplicatorInterface;
 
-abstract class FirstVowel extends AbstractReduplicator implements ReduplicatorInterface
+class FirstVowel extends AbstractReduplicator implements ReduplicatorInterface
 {
 	const VOWELS = ['a', 'e', 'i', 'o', 'u'];
  	/**

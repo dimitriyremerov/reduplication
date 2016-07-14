@@ -11,5 +11,10 @@
   ],
   "require" : {
     "php": "^7.1-dev"
+  },
+  "autoload": {
+    "psr-0": {
+      "Reduplication\\": "."
+    }
   }
 }
