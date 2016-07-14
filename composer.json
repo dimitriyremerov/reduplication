@@ -8,5 +8,8 @@
       "name": "Dimitriy Remerov",
       "email": "dimitriy@remerov.ru"
     }
-  ]
+  ],
+  "require" : {
+    "php": "^7.1-dev"
+  }
 }

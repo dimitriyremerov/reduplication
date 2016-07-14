@@ -9,7 +9,7 @@
 namespace Reduplication;
 
 
-class Reduplicator
+abstract class AbstractReduplicator implements ReduplicatorInterface
 {
     /**
      * @var ReduplicationConfig
@@ -28,9 +28,7 @@ class Reduplicator
      * Main reduplcation function
      *
      * @param string $string
+     * @return string
      */
-    public function reduplicate($string)
-    {
-
-    }
+    abstract public function reduplicate(string $string) : string;
 }
