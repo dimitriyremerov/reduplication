@@ -21,5 +21,5 @@ interface ReduplicatorInterface
 	 *
 	 * @param string $string
 	 */
-	public function reduplicate(string $string) : string;
+	public function reduplicate(string $string): string;
 }

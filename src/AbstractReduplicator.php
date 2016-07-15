@@ -30,5 +30,5 @@ abstract class AbstractReduplicator implements ReduplicatorInterface
      * @param string $string
      * @return string
      */
-    abstract public function reduplicate(string $string) : string;
+    abstract public function reduplicate(string $string): string;
 }

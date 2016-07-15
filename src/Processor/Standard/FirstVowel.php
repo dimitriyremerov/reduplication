@@ -6,14 +6,9 @@
  * Time: 19:50
  */
 
-namespace Reduplication\Strategy;
+namespace Reduplication\Processor\Standard;
 
-
-use Reduplication\AbstractReduplicator;
-use Reduplication\ReduplicationConfig;
-use Reduplication\ReduplicatorInterface;
-
-class FirstVowel extends AbstractReduplicator implements ReduplicatorInterface
+class FirstVowel
 {
 	const VOWELS = ['a', 'e', 'i', 'o', 'u'];
  	/**
@@ -22,17 +17,17 @@ class FirstVowel extends AbstractReduplicator implements ReduplicatorInterface
 	 * @param string $string
 	 * @return string
 	 */
-	public function reduplicate(string $string) : string
+	public static function reduplicate(string $string) : string
 	{
-		$firstVowelPos = $this->detectFirstVowelPos($string);
-		return $this->concatenateParts($this->config->getBase(), substr($string, $firstVowelPos));
+		$firstVowelPos = static::detectFirstVowelPos($string);
+		return static::concatenateParts($this->config->getBase(), substr($string, $firstVowelPos));
 	}
 
 	/**
 	 * @param string $string
 	 * @return int|null
 	 */
-	protected function detectFirstVowelPos(string $string) : ?int
+	protected static function detectFirstVowelPos(string $string) : ?int
 	{
 		for ($i = 0; $i <= strlen($string); $i++) {
 			if (static::isVowel($string[$i])) {
@@ -51,7 +46,7 @@ class FirstVowel extends AbstractReduplicator implements ReduplicatorInterface
 		return isset($vowels[static::class][$letter]);
 	}
 
-	protected function concatenateParts(string $part1, string $part2) : string
+	protected static function concatenateParts(string $part1, string $part2) : string
 	{
 		if (static::isVowel($part1[strlen($part1) - 1]) && static::isVowel($part2[0])) {
 			$part1 = substr($part1, 0, strlen($part1) - 1);

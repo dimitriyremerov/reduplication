@@ -24,7 +24,7 @@ class ReduplicationConfig
      * @param string $language
      * @param string $base
      */
-    public function __construct($language, $base)
+    public function __construct(string $language, string $base)
     {
         $this->language = (string) $language;
         $this->base = (string) $base;
@@ -33,7 +33,7 @@ class ReduplicationConfig
     /**
      * @return string
      */
-    public function getLanguage()
+    public function getLanguage(): string
     {
         return $this->language;
     }
@@ -41,7 +41,7 @@ class ReduplicationConfig
     /**
      * @return string
      */
-    public function getBase()
+    public function getBase(): string
     {
         return $this->base;
     }
